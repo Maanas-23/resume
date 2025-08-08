@@ -1,0 +1,215 @@
+%-------------------------
+% Resume in Latex
+% Author : Maanas Singh
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeProjectItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeProjectItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeProjectSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+
+\begin{center}
+    \textbf{\Huge \scshape Maanas Singh} \\ \vspace{1pt}
+    \small +91 9900632800 $|$ \href{mailto:maanasmsingh@gmail.com}{\underline{maanasmsingh@gmail.com}} $|$
+    \href{https://linkedin.com/Maanas-23}{\underline{LinkedIn}} $|$
+    \href{https://github.com/Maanas-23}{\underline{GitHub}} $|$
+    \href{https://codeforces.com/profile/Maanas23}{\underline{Codeforces}}
+\end{center}
+
+%-----------EDUCATION-----------------
+\section{Education}\label{sec:education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {BITS Pilani}{Pilani, Rajasthan}
+    {B.E. Electronics and Communications, M.Sc. Mathematics (Dual Degree)}{2021 -- 2026}
+\resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}\label{sec:experience}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Uber}{Bengaluru, Karnataka}
+    {Software Engineering Intern}{May 2025 -- July 2025}
+    \resumeItemListStart
+      \resumeItem{Engineered a \textbf{LangGraph-based RAG assistant} in \textbf{Python} to answer compliance queries by generating and executing context-aware \textbf{SQL} over a custom \textbf{MySQL} database.}
+      \resumeItem{Automated daily validation and ingestion of YAML configs into MySQL, with alerting to ensure data freshness for the RAG assistant.}
+      \resumeItem{Developed a pipeline to detect merchant data changes from \textbf{Hive} and publish updates to \textbf{Kafka}, with a \textbf{Golang} consumer for downstream processing.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {TrueFoundry}{Remote}
+    {Software Engineering Intern}{Oct 2024 -- April 2025}
+    \resumeItemListStart
+      \resumeItem{Worked on the \textbf{Autopilot module} of TrueFoundry's \textbf{NestJS backend}, enabling dynamic scaling of \textbf{CPU/memory requests and limits} for Kubernetes workloads using various metrics.}
+      \resumeItem{Contributed to \textbf{KubeElasti}, a \textbf{Go-based} open-source system for \textbf{scale-to-zero}, composed of a \textbf{Kubernetes operator} and a reverse proxy resolver.}
+      \resumeItem{Implemented the \textbf{scale-to-zero logic from scratch}, designing an extensible scaler interface and building a \textbf{Prometheus-based scaler} to trigger scale-down based on metric thresholds and comparison operators.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+  {GPlan}{Pilani, Rajasthan}
+  {Software Development Intern}{Aug 2023 -- Aug 2024}
+  \resumeItemListStart
+    \resumeItem{Developed \textbf{backend infrastructure} and \textbf{REST APIs} for automated floorplan generation (\textbf{Django}, \textbf{PostgreSQL}), integrating core graph algorithms and Stripe payments; deployed robust, scalable systems with \textbf{Docker}, \textbf{Nginx}, and CI/CD pipelines.}
+    \resumeItem{Built the web backend for the GPlan game using \textbf{Go} (\textbf{Gin}) and \textbf{PostgreSQL}, enabling real-time gameplay and seamless integration with existing services.}
+  \resumeItemListEnd
+
+  \resumeSubheading
+    {BITS Pilani}{Pilani, Rajasthan}
+    {Backend Developer \& Teaching Assistant}{April 2023 -- June 2023, May 2024 -- Dec 2024}
+    \resumeItemListStart
+      \resumeItem{\textbf{Hostel Allocation Portal}: Architected and deployed the hostel allocation portal (\textbf{Express.js}, \textbf{Node.js}, \textbf{MongoDB}, \textbf{Kubernetes}) serving \textbf{3500+} students with \textbf{98.9\%} accuracy and \textbf{zero-downtime}.}
+      \resumeItem{\textbf{Teaching Assistant — Web Programming}: Mentored hundreds of students in web technologies: (\textbf{HTML, CSS, JS, PHP})}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{Projects}
+\resumeProjectSubHeadingListStart
+  \resumeSubItem{\textbf{BITS Fest Backend Infrastructure}}
+    {Developed \textbf{REST APIs} and async wallet system (\textbf{Django}, \textbf{PostgreSQL}, \textbf{Docker}) processing \textbf{INR 2.5Cr+} for \textbf{5,000+ users} (\textbf{1,600+} peak concurrent); ensured \textbf{99.9\% uptime} with Dockerized, load-balanced deployment.}
+  \resumeSubItem{\textbf{Minimal Relational Database in Go}}
+    {Built a \textbf{relational database from scratch} in \textbf{Go}, starting with a \textbf{B+tree} for efficient data querying and manipulation. Implemented \textbf{durability features}, a \textbf{copy-on-write KV store} supporting \textbf{concurrent transactions}, and a custom SQL-like query language.}
+\resumeSubHeadingListEnd
+
+%-----------COMPETITIONS-----------
+\section{Competitions}
+  \begin{itemize}[leftmargin=*, itemsep=0pt, topsep=0pt]
+    \resumeItem{\textbf{Candidate Master, \href{https://codeforces.com/profile/Maanas23}{Codeforces}} (Rating: 1966, Rank: 156 in India)}
+    \resumeItem{\textbf{ICPC Regionalist, Amritapuri 2024-25}}
+  \end{itemize}
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  {\item{
+    \textbf{Languages}{: Go, Python, JavaScript, Lua, C, C++, Java, SQL} \\
+    \textbf{Frameworks}{: Django, Django REST Framework, Node.js, Express.js, NestJS} \\
+    \textbf{DevOps}{: Docker, Kubernetes, Nginx, Gunicorn, Github Actions, Linux} \\
+    \textbf{Data}{: PostgreSQL, MongoDB, MySQL, SQLite, Hive, Kafka, LangGraph} \\
+  }}
+\end{itemize}
+
+%
+%--------SKILLS------------
+%\section{Skills}
+%  \resumeSubHeadingListStart
+%    \item{
+%      \textbf{Languages}{: Scala, Python, JavaScript, C++, SQL, Java}
+%      \hfill
+%      \textbf{Technologies}{: AWS, Play, React, Kafka, GCE}
+%    }
+%  \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
